@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-size: 1.1rem;
+  font-family: "Karla", sans-serif;
+}
+header {
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+}
+header > nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+header > nav > .nav-logo {
+  width: 40px;
+  height: 30px;
+}
+header > nav > .nav-brand {
+  margin-right: auto;
+  font-weight: 600;
+  line-height: 24px;
+}
+.form-floating>label {
+  position: absolute;
+  left: 15px;
+}
+button{
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%)!important;
+  opacity: 0.9;
+  font-family: "Karla", sans-serif;
+}
+
+.form-control{
+  font-size: 1.3rem;
+  font-family: "Karla", sans-serif;
+}
+
+.meme-image{
+  display: block;
+  margin: 0 auto;
+}

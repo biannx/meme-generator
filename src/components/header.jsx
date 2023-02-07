@@ -6,9 +6,9 @@ export default function Header() {
         <header className="container-fluid">
             <nav className="container py-3">
                 <img className="nav-logo" src={headerLogo} alt="Header Meme Logo" />
-                <h3 className="nav-brand px-3 pt-2">
+                <h5 className="nav-brand px-3 pt-1">
                     Meme Generator
-                </h3>
+                </h5>
                 <h6 className="project-number">
                     React Course - Project 3
                 </h6>
