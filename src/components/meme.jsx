@@ -1,13 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import memesData from "../data.jsx"
 
 export default function Meme() {
-    const [memeImage, setmemeImage] = React.useState(null);
+
+    const [meme, setMeme] = useState({
+        topText: "",
+        bottomText: "",
+        randomImage:"http://i.imgflip.com/1bij.jpg"
+    })
+
+    const [allMemeImages, setAllMemeImages] = useState(memesData)
 
     function getMemeImage(){
-        const memesArray = memesData.data.memes
-        const randomNumber = Math.floor(Math.random() * memesArray.length)
-        setmemeImage(memesArray[randomNumber].url)
+        const memesArray = allMemeImages.data.memes
+        const randomNumber = Math.floor(Math.random() * memesArray.length);
+        const url = memesArray[randomNumber].url
+        setMeme(prevMemes => ({
+            ...prevMemes,
+            randomImage: url
+        }))
+        console.log("changed!")
     }
 
 
@@ -22,7 +34,7 @@ export default function Meme() {
                         id="floatingTop"
                         placeholder="test"
                     />
-                    <label for="floatingInput">Top text</label>
+                    <label htmlFor="floatingInput">Top text</label>
                 </div>
 
                 {/* bottom text */}
@@ -33,7 +45,7 @@ export default function Meme() {
                         id="floatingBottom"
                         placeholder="test"
                     />
-                    <label for="floatingPassword">Bottom text</label>
+                    <label htmlFor="floatingPassword">Bottom text</label>
                 </div>
             </div>
             <button 
@@ -43,7 +55,8 @@ export default function Meme() {
             >
                 Get a new meme image 🖼
             </button>
-            <img src={memeImage} alt="Meme Image" className="meme-image" />
+            <img src={meme.randomImage} alt="Meme Image" className="meme-image" />
+            <br />
         </main>
     )
 }
