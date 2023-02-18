@@ -11,14 +11,13 @@ export default function Meme() {
 	const [allMemes, setAllMemes] = useState([])
 
 	useEffect(() => {
-		async function getMemes(){
+		async function getMemes() {
 			const response = await fetch("https://api.imgflip.com/get_memes")
 			const data = await response.json()
 			setAllMemes(data.data.memes)
 		}
 		getMemes()
 	}, [])
-
 
 	function getMemeImage() {
 		const randomNumber = Math.floor(Math.random() * allMemes.length);
@@ -27,10 +26,9 @@ export default function Meme() {
 			...prevMemes,
 			randomImage: url
 		}))
-		console.log("changed!")
 	}
 
-	// controlled inputs for top and bottom text for every character stroke/value
+	// controlled inputs for top and bottom text for every onChange on character stroke/value
 	function handleChange(Event) {
 		const { name, value } = Event.target
 		setMeme(prevMeme => ({
@@ -77,10 +75,10 @@ export default function Meme() {
 			>
 				Get a new meme image 🖼
 			</button>
-			<div className="meme">
+			<div className="meme position-relative text-center">
 				<img src={meme.randomImage} className="meme-image" alt="Meme Image" />
-				<h2 className="meme-text top">{meme.topText}</h2>
-				<h2 className="meme-text bottom">{meme.bottomText}</h2>
+				<h2 className="meme-text position-absolute top-0">{meme.topText}</h2>
+				<h2 className="meme-text position-absolute bottom-0">{meme.bottomText}</h2>
 			</div>
 			<br />
 		</main>

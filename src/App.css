@@ -56,7 +56,6 @@ button {
 .meme-text {
   position: absolute;
   width: 80%;
-  text-align: center;
   left: 50%;
   transform: translateX(-50%);
   margin: 15px 0;
@@ -71,10 +70,3 @@ button {
     2px 2px 5px #000;
 }
 
-.bottom {
-  bottom: 0;
-}
-
-.top {
-  top: 0;
-}
