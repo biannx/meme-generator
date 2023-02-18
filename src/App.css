@@ -11,12 +11,7 @@ body {
 header {
   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
 }
-header > nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-}
+
 header > nav > .nav-logo {
   width: 40px;
   height: 30px;
@@ -49,10 +44,6 @@ button {
   width: auto;
 }
 
-.meme {
-  position: relative;
-}
-
 .meme-text {
   position: absolute;
   width: 80%;
@@ -69,4 +60,3 @@ button {
     -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
     2px 2px 5px #000;
 }
-

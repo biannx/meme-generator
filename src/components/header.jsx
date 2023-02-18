@@ -4,7 +4,7 @@ import headerLogo from '../assets/TrollFace.png'
 export default function Header() {
     return (
         <header className="container-fluid">
-            <nav className="container py-3">
+            <nav className="container d-flex justify-content-center align-items-center text-light py-3">
                 <img className="nav-logo" src={headerLogo} alt="Header Meme Logo" />
                 <h5 className="nav-brand px-3 pt-1">
                     Meme Generator
